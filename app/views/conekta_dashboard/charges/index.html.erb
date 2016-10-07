@@ -1,0 +1,23 @@
+<h2 class="text-center">Historial del Cargo</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Tipo</th>
+      <th>Estatus</th>
+      <th>Mensaje</th>
+      <th>Monto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @charges.each do |charge| %>
+      <tr>
+        <td><%= charge.created_at %></td>
+        <td><%= charge.type %></td>
+        <td><%= charge.status %></td>
+        <td><%= charge.message%></td>
+        <td><%= charge.amount%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
